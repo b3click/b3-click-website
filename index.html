@@ -3,922 +3,695 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>B3 Click | Wedding Photography & Cinematography</title>
-
-<meta name="description" content="B3 Click - Premium Wedding Photography, Cinematography and Pre-Wedding Photography in Purnea, Bihar.">
+<title>B3 Click | Premium Wedding Photography</title>
+<meta name="description" content="B3 Click - Premium Wedding Photography & Cinematography in Purnea, Bihar. Capturing the colour of life.">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-html{
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#111;
-    color:#fff;
-    line-height:1.6;
+  background:#0b0b0b;
+  color:#fff;
+  font-family:Montserrat,sans-serif;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block;object-fit:cover}
+
+:root{
+  --gold:#d8b477;
+  --light:#f5eee4;
+  --dark:#0b0b0b;
+  --gray:#aaa;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+.container{width:90%;max-width:1250px;margin:auto}
 
-img{
-    width:100%;
-    display:block;
-}
-
-/* NAVBAR */
-
+/* NAV */
 nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:22px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:linear-gradient(to bottom,rgba(0,0,0,.75),transparent);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:22px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(to bottom,rgba(0,0,0,.9),transparent);
 }
-
 .logo{
-    font-size:25px;
-    font-weight:bold;
-    letter-spacing:4px;
+  font-size:25px;
+  font-weight:700;
+  letter-spacing:5px;
 }
-
 .logo span{
-    display:block;
-    font-size:9px;
-    letter-spacing:3px;
-    color:#d6b98c;
-    margin-top:2px;
+  display:block;
+  font-size:8px;
+  letter-spacing:3px;
+  color:var(--gold);
+  margin-top:2px;
 }
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
+.navlinks{
+  display:flex;
+  gap:30px;
 }
-
-nav ul a{
-    font-size:13px;
-    letter-spacing:1px;
-    transition:.3s;
+.navlinks a{
+  font-size:11px;
+  letter-spacing:2px;
+  color:#eee;
 }
+.navlinks a:hover{color:var(--gold)}
 
-nav ul a:hover{
-    color:#d6b98c;
+@media(max-width:700px){
+ .navlinks{display:none}
+ nav{padding:18px 5%}
 }
 
 /* HERO */
-
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:120px 7%;
-    position:relative;
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85")
-    center/cover;
+  height:100vh;
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.3)),
+  url("DSC_4691.JPG_result.jpg") center/cover;
 }
-
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,#0b0b0b 0%,transparent 25%);
+}
 .hero-content{
-    max-width:800px;
+  position:relative;
+  z-index:2;
+  width:90%;
+  max-width:1050px;
+  margin:auto;
 }
-
-.small-title{
-    color:#d6b98c;
-    letter-spacing:5px;
-    font-size:13px;
-    margin-bottom:25px;
+.kicker{
+  color:var(--gold);
+  letter-spacing:5px;
+  font-size:11px;
+  margin-bottom:20px;
 }
-
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(45px,7vw,90px);
-    line-height:1.05;
-    font-weight:400;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(55px,8vw,105px);
+  line-height:.9;
+  font-weight:500;
+  max-width:900px;
 }
-
 .hero p{
-    margin:28px 0;
-    max-width:650px;
-    color:#ddd;
-    font-size:18px;
+  max-width:620px;
+  color:#ddd;
+  margin:30px 0;
+  font-size:14px;
 }
-
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
+.buttons{display:flex;gap:15px;flex-wrap:wrap}
 .btn{
-    padding:15px 27px;
-    border:1px solid #d6b98c;
-    display:inline-block;
-    font-size:12px;
-    letter-spacing:2px;
-    transition:.3s;
+  padding:15px 28px;
+  border:1px solid var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  transition:.3s;
 }
-
-.btn.primary{
-    background:#d6b98c;
-    color:#111;
+.btn.gold{
+  background:var(--gold);
+  color:#111;
 }
-
 .btn:hover{
-    transform:translateY(-3px);
+  transform:translateY(-3px);
+  background:var(--gold);
+  color:#111;
 }
 
-/* COMMON */
-
-section{
-    padding:100px 7%;
+/* SECTIONS */
+section{padding:110px 0}
+.section-head{text-align:center;margin-bottom:55px}
+.section-head small{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:10px;
 }
-
-.section-title{
-    font-family:Georgia,serif;
-    font-size:48px;
-    font-weight:400;
-    margin-bottom:20px;
+.section-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:55px;
+  font-weight:500;
+  margin:8px 0;
 }
-
-.section-subtitle{
-    color:#aaa;
-    max-width:700px;
-    margin-bottom:50px;
+.section-head p{
+  color:#999;
+  max-width:600px;
+  margin:auto;
+  font-size:13px;
 }
 
 /* ABOUT */
-
 .about{
-    background:#f2eee7;
-    color:#222;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.about-img img{
+  height:600px;
+  object-fit:cover;
+}
+.about-text h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:60px;
+  font-weight:500;
+}
+.about-text p{
+  color:#aaa;
+  font-size:14px;
+  margin:20px 0;
+}
+.signature{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:11px;
+  margin-top:30px;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about-image{
-    height:600px;
-    object-fit:cover;
-}
-
-.about p{
-    color:#555;
-    margin-bottom:20px;
+@media(max-width:750px){
+ .about{grid-template-columns:1fr;gap:35px}
+ .about-img img{height:450px}
 }
 
 /* SERVICES */
-
 .services{
-    background:#151515;
+  background:#101010;
 }
-
 .service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:#292929;
 }
-
 .service{
-    border:1px solid #333;
-    padding:35px 28px;
-    transition:.4s;
+  background:#101010;
+  padding:45px 25px;
+  min-height:200px;
+  transition:.3s;
 }
-
-.service:hover{
-    transform:translateY(-8px);
-    border-color:#d6b98c;
-}
-
+.service:hover{background:#181818}
 .service-number{
-    color:#d6b98c;
-    font-size:13px;
-    margin-bottom:25px;
+  color:var(--gold);
+  font-size:11px;
 }
-
 .service h3{
-    font-family:Georgia,serif;
-    font-size:25px;
-    font-weight:400;
-    margin-bottom:12px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  margin:20px 0 10px;
+}
+.service p{font-size:12px;color:#999}
+
+@media(max-width:800px){
+ .service-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){
+ .service-grid{grid-template-columns:1fr}
 }
 
-.service p{
-    color:#999;
-    font-size:14px;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-    background:#0c0c0c;
-}
-
+/* GALLERY */
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
+  columns:3 280px;
+  column-gap:15px;
+}
+.gallery-item{
+  margin-bottom:15px;
+  overflow:hidden;
+  break-inside:avoid;
+  position:relative;
+}
+.gallery-item img{
+  transition:.6s;
+}
+.gallery-item:hover img{
+  transform:scale(1.04);
+}
+.gallery-item:after{
+  content:"B3 CLICK";
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  font-size:8px;
+  letter-spacing:3px;
+  opacity:.7;
 }
 
-.gallery img{
-    height:420px;
-    object-fit:cover;
-    transition:.5s;
+/* FEATURE */
+.feature{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:15px;
 }
+.feature img{height:650px}
+.feature-side{
+  display:grid;
+  gap:15px;
+}
+.feature-side img{height:317px}
 
-.gallery img:hover{
-    transform:scale(1.025);
-    opacity:.8;
+@media(max-width:700px){
+ .feature{grid-template-columns:1fr}
+ .feature img,.feature-side img{height:400px}
 }
 
 /* PACKAGE */
-
+.package-section{background:#101010}
 .package{
-    background:#f2eee7;
-    color:#222;
-    text-align:center;
+  max-width:850px;
+  margin:auto;
+  border:1px solid #333;
+  padding:55px;
+  text-align:center;
+  position:relative;
+}
+.package:before{
+  content:"B3 CLICK";
+  position:absolute;
+  top:18px;
+  left:0;
+  right:0;
+  font-size:8px;
+  letter-spacing:5px;
+  color:var(--gold);
+}
+.package h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:48px;
+  font-weight:500;
+  margin-bottom:10px;
+}
+.package .price{
+  color:var(--gold);
+  font-size:28px;
+  margin:15px 0 25px;
+}
+.package ul{
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  text-align:left;
+  margin:30px 0;
+}
+.package li{
+  color:#bbb;
+  font-size:12px;
+  padding-bottom:10px;
+  border-bottom:1px solid #252525;
+}
+.package li:before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:8px;
+}
+@media(max-width:600px){
+ .package{padding:35px 20px}
+ .package ul{grid-template-columns:1fr}
 }
 
-.package-card{
-    max-width:700px;
-    margin:40px auto 0;
-    background:#fff;
-    padding:55px;
-    box-shadow:0 20px 60px rgba(0,0,0,.12);
+/* QUOTE */
+.quote{
+  text-align:center;
+  padding:130px 20px;
+  background:
+  linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+  url("IMG_3003.JPG_result.jpg") center/cover fixed;
 }
-
-.package-card h3{
-    font-family:Georgia,serif;
-    font-size:32px;
-    font-weight:400;
+.quote h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,7vw,80px);
+  font-weight:400;
+  max-width:950px;
+  margin:auto;
 }
-
-.price{
-    font-size:50px;
-    margin:15px 0 30px;
-}
-
-.package-card ul{
-    list-style:none;
-    text-align:left;
-    columns:2;
-    margin-bottom:35px;
-}
-
-.package-card li{
-    padding:8px 0;
-    color:#555;
-}
-
-/* TEAM */
-
-.team{
-    background:#151515;
-}
-
-.team-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.team-card{
-    text-align:center;
-    border:1px solid #333;
-    padding:30px;
-}
-
-.team-card h3{
-    font-family:Georgia,serif;
-    margin-top:20px;
-    font-size:24px;
-    font-weight:400;
-}
-
-.team-card p{
-    color:#999;
+.quote p{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:10px;
+  margin-top:25px;
 }
 
 /* CONTACT */
-
 .contact{
-    background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85")
-    center/cover;
-    text-align:center;
+  text-align:center;
 }
-
-.contact .section-subtitle{
-    margin-left:auto;
-    margin-right:auto;
+.contact h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:65px;
+  font-weight:500;
 }
-
+.contact p{
+  color:#999;
+  margin:15px auto 30px;
+  max-width:550px;
+  font-size:13px;
+}
 .contact-info{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin:40px 0;
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  flex-wrap:wrap;
+  margin:30px 0;
 }
-
-.contact-box{
-    border:1px solid #555;
-    padding:20px 30px;
+.contact-info div{
+  color:#ccc;
+  font-size:12px;
 }
-
-.contact-box span{
-    color:#d6b98c;
-    display:block;
-    font-size:12px;
-    letter-spacing:2px;
-    margin-bottom:5px;
+.contact-info strong{
+  display:block;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:5px;
 }
 
 /* FOOTER */
-
 footer{
-    padding:50px 7%;
-    background:#080808;
-    text-align:center;
+  border-top:1px solid #222;
+  padding:40px 5%;
+  text-align:center;
+  color:#777;
+  font-size:10px;
+  letter-spacing:1px;
 }
-
-footer .logo{
-    margin-bottom:10px;
-}
-
-footer p{
-    color:#777;
-    font-size:13px;
-}
-
-.social{
-    margin:20px 0;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    color:#d6b98c;
-}
+footer strong{color:#fff}
 
 /* WHATSAPP */
-
 .whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    z-index:999;
-    box-shadow:0 8px 30px rgba(0,0,0,.4);
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    nav{
-        padding:18px 5%;
-    }
-
-    nav ul{
-        display:none;
-    }
-
-    section{
-        padding:75px 5%;
-    }
-
-    .hero{
-        padding:110px 5% 80px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .about-image{
-        height:450px;
-    }
-
-    .service-grid,
-    .team-grid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .gallery img{
-        height:280px;
-    }
-
-    .section-title{
-        font-size:38px;
-    }
-
-    .package-card{
-        padding:30px 20px;
-    }
-
-    .package-card ul{
-        columns:1;
-    }
-
-    .contact-info{
-        flex-direction:column;
-    }
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:999;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  box-shadow:0 5px 25px rgba(0,0,0,.5);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
-    <a href="#home" class="logo">
-        B3 CLICK
-        <span>CAPTURING THE COLOUR OF LIFE</span>
-    </a>
+  <a href="#" class="logo">
+    B3 CLICK
+    <span>CAPTURING THE COLOUR OF LIFE</span>
+  </a>
 
-    <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#package">PACKAGE</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
+  <div class="navlinks">
+    <a href="#about">ABOUT</a>
+    <a href="#services">SERVICES</a>
+    <a href="#portfolio">PORTFOLIO</a>
+    <a href="#package">PACKAGE</a>
+    <a href="#contact">CONTACT</a>
+  </div>
 </nav>
 
-
 <!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="kicker">B3 CLICK • PURNEA, BIHAR</div>
+    <h1>We Capture<br>Moments.</h1>
+    <p>
+      Premium Wedding Photography & Cinematography crafted with emotion,
+      creativity and cinematic storytelling.
+    </p>
 
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="small-title">
-            B3 CLICK • PURNEA, BIHAR
-        </div>
-
-        <h1>
-            We Capture Moments.<br>
-            You Keep The Memories.
-        </h1>
-
-        <p>
-            Premium Wedding Photography & Cinematography
-            crafted with emotion, creativity and cinematic storytelling.
-        </p>
-
-        <div class="buttons">
-            <a href="#portfolio" class="btn primary">
-                VIEW OUR WORK
-            </a>
-
-            <a href="#contact" class="btn">
-                CHECK AVAILABILITY
-            </a>
-        </div>
-
+    <div class="buttons">
+      <a href="#portfolio" class="btn gold">VIEW OUR WORK</a>
+      <a href="#contact" class="btn">CHECK AVAILABILITY</a>
     </div>
-
-</section>
-
+  </div>
+</header>
 
 <!-- ABOUT -->
-
-<section class="about" id="about">
-
-    <div class="about-grid">
-
-        <img
-        class="about-image"
-        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85"
-        alt="B3 Click Wedding Photography">
-
-        <div>
-
-            <div class="small-title">
-                ABOUT B3 CLICK
-            </div>
-
-            <h2 class="section-title">
-                More Than Photographs.<br>
-                We Create Memories.
-            </h2>
-
-            <p>
-                B3 Click is a professional photography and
-                cinematography studio based in Purnea, Bihar,
-                dedicated to turning real moments into timeless
-                visual stories.
-            </p>
-
-            <p>
-                From intimate emotions to grand celebrations,
-                our team focuses on capturing every detail,
-                expression and unforgettable moment with a
-                creative and cinematic approach.
-            </p>
-
-            <p>
-                We believe wedding photography is not just about
-                taking pictures. It is about preserving the
-                emotions, people and stories that make every
-                celebration unique.
-            </p>
-
-        </div>
-
+<section id="about">
+  <div class="container about">
+    <div class="about-img">
+      <img src="DSC_0214_result.jpg" alt="B3 Click Wedding Photography">
     </div>
 
+    <div class="about-text">
+      <div class="kicker">OUR STORY</div>
+      <h2>Stories That<br>Feel Like You.</h2>
+      <p>
+        At B3 Click, we believe every wedding has its own story.
+        From the quiet emotions to the loud celebrations, we preserve
+        every genuine moment with a cinematic and timeless approach.
+      </p>
+      <p>
+        Our team combines photography, cinematography and creative
+        storytelling to create memories that you can relive for years.
+      </p>
+      <div class="signature">B3 CLICK — PURNEA, BIHAR</div>
+    </div>
+  </div>
 </section>
-
 
 <!-- SERVICES -->
-
-<section class="services" id="services">
-
-    <div class="small-title">
-        WHAT WE DO
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head">
+      <small>WHAT WE DO</small>
+      <h2>Our Services</h2>
+      <p>Everything you need to tell your wedding story beautifully.</p>
     </div>
-
-    <h2 class="section-title">
-        Our Services
-    </h2>
-
-    <p class="section-subtitle">
-        From the first frame to the final film, we create
-        visual stories that preserve the emotion of your celebration.
-    </p>
 
     <div class="service-grid">
+      <div class="service">
+        <span class="service-number">01</span>
+        <h3>Wedding Photography</h3>
+        <p>Authentic emotions, beautiful portraits and timeless wedding memories.</p>
+      </div>
 
-        <div class="service">
-            <div class="service-number">01</div>
-            <h3>Wedding Photography</h3>
-            <p>
-                Candid, traditional and portrait photography
-                capturing every important moment.
-            </p>
-        </div>
+      <div class="service">
+        <span class="service-number">02</span>
+        <h3>Cinematic Films</h3>
+        <p>Wedding films crafted with cinematic visuals, music and storytelling.</p>
+      </div>
 
-        <div class="service">
-            <div class="service-number">02</div>
-            <h3>Wedding Cinematography</h3>
-            <p>
-                Cinematic wedding films created with emotion,
-                storytelling and beautiful visuals.
-            </p>
-        </div>
+      <div class="service">
+        <span class="service-number">03</span>
+        <h3>Pre-Wedding</h3>
+        <p>Creative couple portraits and cinematic pre-wedding stories.</p>
+      </div>
 
-        <div class="service">
-            <div class="service-number">03</div>
-            <h3>Pre-Wedding</h3>
-            <p>
-                Creative couple sessions designed around
-                your personality and story.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">04</div>
-            <h3>Candid Photography</h3>
-            <p>
-                Natural and emotional moments captured
-                without disturbing the moment.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">05</div>
-            <h3>Cinematic Reels</h3>
-            <p>
-                Creative wedding reels designed for
-                Instagram and modern couples.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">06</div>
-            <h3>Drone Cinematography</h3>
-            <p>
-                Aerial cinematic visuals for venues,
-                entries and grand celebrations.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">07</div>
-            <h3>Traditional Coverage</h3>
-            <p>
-                Complete photography and videography
-                coverage of your wedding events.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">08</div>
-            <h3>Premium Albums</h3>
-            <p>
-                Professionally designed albums featuring
-                your most beautiful memories.
-            </p>
-        </div>
-
-        <div class="service">
-            <div class="service-number">09</div>
-            <h3>Event Coverage</h3>
-            <p>
-                Professional photography and videography
-                for celebrations and special events.
-            </p>
-        </div>
-
+      <div class="service">
+        <span class="service-number">04</span>
+        <h3>Reels & Teasers</h3>
+        <p>Premium short-form wedding content made for Instagram and social media.</p>
+      </div>
     </div>
-
+  </div>
 </section>
 
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio" id="portfolio">
-
-    <div class="small-title">
-        SELECTED WORK
+<!-- FEATURED -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <small>FEATURED STORIES</small>
+      <h2>Love In Every Frame</h2>
     </div>
 
-    <h2 class="section-title">
-        Stories We've Captured
-    </h2>
+    <div class="feature">
+      <img src="IMG_3005.JPG_result.jpg" alt="Wedding Couple">
+      <div class="feature-side">
+        <img src="DSC_0251_result.jpg" alt="Wedding Portrait">
+        <img src="DSC_0327_result.jpg" alt="Wedding Moment">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <p class="section-subtitle">
-        A glimpse into our photography and cinematography.
-        Your photographs can replace these demo images.
-    </p>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <small>SELECTED WORK</small>
+      <h2>Wedding Stories</h2>
+      <p>A collection of real moments captured by B3 Click.</p>
+    </div>
 
     <div class="gallery">
 
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85" alt="Wedding">
-        
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85" alt="Wedding Couple">
+      <div class="gallery-item">
+        <img src="01.jpg%20_result.jpg" alt="Wedding Photography">
+      </div>
 
-        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=85" alt="Wedding Photography">
+      <div class="gallery-item">
+        <img src="01.jpg%20(1)_result.jpg" alt="Bridal Photography">
+      </div>
 
-        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85" alt="Wedding Ceremony">
+      <div class="gallery-item">
+        <img src="01.jpg%20(2)_result.jpg" alt="Wedding Photography">
+      </div>
 
-        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=85" alt="Wedding Event">
+      <div class="gallery-item">
+        <img src="01.jpg%20(3)_result.jpg" alt="Wedding Photography">
+      </div>
 
-        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1000&q=85" alt="Wedding Celebration">
+      <div class="gallery-item">
+        <img src="01.jpg%20(4)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="02.jpg%20_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="02.jpg%20(2)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="02.jpg%20(3)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="02.jpg%20(4)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="03.jpg%20_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="03.jpg%20(1)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="03.jpg%20(2)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="03.jpg%20(3)_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="04.jpg%20_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="DSC_0348_result.jpg" alt="Wedding Photography">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_3009.JPG_result.jpg" alt="Wedding Photography">
+      </div>
 
     </div>
-
+  </div>
 </section>
-
 
 <!-- PACKAGE -->
-
-<section class="package" id="package">
-
-    <div class="small-title">
-        WEDDING EXPERIENCE
+<section id="package" class="package-section">
+  <div class="container">
+    <div class="section-head">
+      <small>OUR SIGNATURE</small>
+      <h2>Wedding Package</h2>
+      <p>Premium coverage designed for complete wedding storytelling.</p>
     </div>
 
-    <h2 class="section-title">
-        Standard Package
-    </h2>
+    <div class="package">
+      <h3>Standard Wedding Package</h3>
+      <div class="price">Starting From ₹71,000</div>
 
-    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
-        A complete two-day wedding photography and cinematography experience.
-    </p>
+      <ul>
+        <li>Cinematographer</li>
+        <li>Candid Photographer</li>
+        <li>Traditional Photographer</li>
+        <li>Traditional Videographer</li>
+        <li>Drone Coverage</li>
+        <li>Cinematic Video Teaser</li>
+        <li>3 Cinematic Reels</li>
+        <li>Traditional Video</li>
+        <li>Candid & Portrait Photos</li>
+        <li>Premium 30 Sheet Album</li>
+        <li>Digital Invitation Card</li>
+        <li>Full Event Edited Photos</li>
+      </ul>
 
-    <div class="package-card">
-
-        <h3>B3 CLICK STANDARD</h3>
-
-        <div class="price">
-            ₹71,000
-        </div>
-
-        <ul>
-            <li>✓ 2 Days Coverage</li>
-            <li>✓ Cinematographer</li>
-            <li>✓ Candid Photographer</li>
-            <li>✓ Videographer</li>
-            <li>✓ Photographer</li>
-            <li>✓ Drone Coverage</li>
-            <li>✓ Cinematic Video Teaser</li>
-            <li>✓ 3 Cinematic Reels</li>
-            <li>✓ Traditional Video</li>
-            <li>✓ Traditional Photos</li>
-            <li>✓ Candid Photos</li>
-            <li>✓ Portrait Photos</li>
-            <li>✓ 30 Sheets Premium Album</li>
-            <li>✓ Digital Invitation Card</li>
-            <li>✓ Edited Photos</li>
-            <li>✓ Full Event Coverage</li>
-        </ul>
-
-        <a
-        href="https://wa.me/917633899156?text=Hi%20B3%20Click%2C%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20package."
-        class="btn primary">
-            ENQUIRE NOW
-        </a>
-
+      <a class="btn gold" href="#contact">BOOK YOUR DATE</a>
     </div>
-
+  </div>
 </section>
 
-
-<!-- TEAM -->
-
-<section class="team">
-
-    <div class="small-title">
-        THE PEOPLE BEHIND THE FRAME
-    </div>
-
-    <h2 class="section-title">
-        Our Creative Team
-    </h2>
-
-    <p class="section-subtitle">
-        Photography, cinematography, editing and creativity —
-        every beautiful story is created together.
-    </p>
-
-    <div class="team-grid">
-
-        <div class="team-card">
-            <div style="font-size:45px;">📸</div>
-            <h3>Photography Team</h3>
-            <p>Capturing genuine emotions and unforgettable moments.</p>
-        </div>
-
-        <div class="team-card">
-            <div style="font-size:45px;">🎥</div>
-            <h3>Cinematography Team</h3>
-            <p>Turning wedding moments into cinematic stories.</p>
-        </div>
-
-        <div class="team-card">
-            <div style="font-size:45px;">🎬</div>
-            <h3>Creative Editing Team</h3>
-            <p>Crafting photographs, films and reels with detail.</p>
-        </div>
-
-    </div>
-
+<!-- QUOTE -->
+<section class="quote">
+  <h2>
+    “Your wedding lasts a day.<br>
+    Your photographs last forever.”
+  </h2>
+  <p>CAPTURING THE COLOUR OF LIFE</p>
 </section>
-
 
 <!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="small-title">
-        LET'S CREATE SOMETHING BEAUTIFUL
+<section id="contact">
+  <div class="container contact">
+    <div class="section-head">
+      <small>LET'S CREATE TOGETHER</small>
+      <h2>Your Story Starts Here.</h2>
+      <p>
+        Planning your wedding or pre-wedding shoot?
+        Get in touch with B3 Click and let's create something unforgettable.
+      </p>
     </div>
-
-    <h2 class="section-title">
-        Your Story Deserves<br>
-        To Be Remembered.
-    </h2>
-
-    <p class="section-subtitle">
-        Tell us about your wedding or event and let's
-        create something unforgettable together.
-    </p>
 
     <div class="contact-info">
+      <div>
+        <strong>CALL / WHATSAPP</strong>
+        7633899156
+      </div>
 
-        <div class="contact-box">
-            <span>CALL</span>
-            <a href="tel:7633899156">
-                7633899156
-            </a>
-        </div>
+      <div>
+        <strong>ALTERNATE</strong>
+        6201304664
+      </div>
 
-        <div class="contact-box">
-            <span>CALL</span>
-            <a href="tel:6201304664">
-                6201304664
-            </a>
-        </div>
-
-        <div class="contact-box">
-            <span>LOCATION</span>
-            Purnea, Bihar
-        </div>
-
+      <div>
+        <strong>LOCATION</strong>
+        Purnea, Bihar
+      </div>
     </div>
 
-    <div class="buttons" style="justify-content:center;">
+    <div class="buttons" style="justify-content:center">
+      <a class="btn gold"
+         href="https://wa.me/917633899156?text=Hello%20B3%20Click%2C%20I%20want%20to%20know%20about%20your%20wedding%20photography%20packages."
+         target="_blank">
+         WHATSAPP US
+      </a>
 
-        <a
-        href="https://wa.me/917633899156?text=Hi%20B3%20Click%2C%20I%20would%20like%20to%20enquire%20about%20photography%20and%20videography."
-        class="btn primary">
-            WHATSAPP US
-        </a>
-
-        <a
-        href="https://www.instagram.com/b3_click/"
-        target="_blank"
-        class="btn">
-            INSTAGRAM
-        </a>
-
-        <a
-        href="https://www.youtube.com/@b3_click7633"
-        target="_blank"
-        class="btn">
-            YOUTUBE
-        </a>
-
+      <a class="btn" href="tel:+917633899156">CALL NOW</a>
     </div>
-
+  </div>
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-    <div class="logo">
-        B3 CLICK
-        <span>CAPTURING THE COLOUR OF LIFE</span>
-    </div>
-
-    <div class="social">
-        <a href="https://www.instagram.com/b3_click/" target="_blank">
-            Instagram
-        </a>
-
-        <a href="https://www.youtube.com/@b3_click7633" target="_blank">
-            YouTube
-        </a>
-
-        <a href="tel:7633899156">
-            Call
-        </a>
-    </div>
-
-    <p>
-        Purnea, Bihar, India
-    </p>
-
-    <p style="margin-top:15px;">
-        © 2026 B3 Click. All Rights Reserved.
-    </p>
-
+  <strong>B3 CLICK</strong> • Capturing The Colour Of Life<br><br>
+  © 2026 B3 Click Photography & Cinematography • Purnea, Bihar
 </footer>
 
-
-<!-- WHATSAPP FLOATING BUTTON -->
-
-<a
-href="https://wa.me/917633899156?text=Hi%20B3%20Click%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
-class="whatsapp"
-target="_blank"
-aria-label="WhatsApp">
-    ☎
+<a class="whatsapp"
+   href="https://wa.me/917633899156"
+   target="_blank"
+   aria-label="WhatsApp">
+   ☎
 </a>
 
 </body>
